@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h2 class="text-white text-center text-4xl font-bold mb-4">
+    <h2
+      class="text-center text-4xl font-bold mb-4"
+      :class="{ 'text-white ': dark, 'text-black': !dark }"
+    >
       My Personal Projects
     </h2>
     <div class="inline-grid grid-cols-2 gap-4 place-items-center w-full">
@@ -11,11 +14,14 @@
       <ProjectCard :project="landingPage" />
       <ProjectCard :project="reactionTimer" />
     </div>
+    <div class="border-b my-4 pb-4 w-4/6 mx-auto"></div>
   </div>
 </template>
 
 <script setup>
-// create a class to store the data of the project card
+const { $dark } = useNuxtApp();
+const dark = ref($dark);
+
 class Project {
   constructor(
     title,
@@ -47,7 +53,7 @@ const gradientTextGenerator = new Project(
 );
 
 const nuxtDojo = new Project(
-  "Nuxt Dojo",
+  "Nuxt Dojo Merch",
   "Nuxt-Dojo is a modern e-commerce website built with Nuxt 3 and Tailwind CSS. It offers a streamlined shopping experience for users and provides an easy-to-use interface for managing products and orders.",
   "/nuxt-dojo.png",
   "Nuxt 3 - JS - TailwindCSS - Apis - CSS - HTML",
@@ -96,6 +102,3 @@ const reactionTimer = new Project(
   false
 );
 </script>
-
-<style  scoped>
-</style>

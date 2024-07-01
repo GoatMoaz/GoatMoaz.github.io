@@ -2,15 +2,20 @@
   <div>
     <div class="flex-col flex items-center justify-center mx-80">
       <div class="flex items-center justify-center gap-7">
-        <h1 class="text-4xl text-center text-white font-bold">
+        <h1
+          class="text-4xl text-center font-bold"
+          :class="{ 'text-white ': dark, 'text-black': !dark }"
+        >
           Hello, I'm <span class="text-[#00C48D]">Moaz Ayman</span>
         </h1>
         <img
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/developer.721e2ae.svg"
-          alt=""
         />
       </div>
-      <p class="text-center text-[#cbd5e0] text-lg my-4">
+      <p
+        class="text-center text-lg my-4"
+        :class="{ 'text-[#cbd5e0] ': dark, 'text-slate-950': !dark }"
+      >
         I'm a passionate computer science student from Egypt dedicated to
         mastering full stack development. With a focus on
         <span class="text-[#00C48D]">Node.js</span> for backend development,
@@ -36,6 +41,8 @@
 </template>
 
 <script setup>
+const { $dark } = useNuxtApp();
+const dark = ref($dark);
 </script>
 
 <style scoped>

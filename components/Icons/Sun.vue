@@ -1,7 +1,7 @@
 <template>
   <div>
     <svg
-      class="w-6 h-6 text-gray-800 dark:text-white"
+      class="w-6 h-6"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -10,7 +10,7 @@
       viewBox="0 0 24 24"
     >
       <path
-        stroke="currentColor"
+        stroke="#cbd5e0"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke-width="2"
@@ -19,3 +19,9 @@
     </svg>
   </div>
 </template>
+
+<style scoped>
+svg {
+  cursor: pointer;
+}
+</style>
