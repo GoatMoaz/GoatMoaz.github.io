@@ -12,8 +12,8 @@
 </template>
 
 <style scoped>
-svg {
-  cursor: pointer;
+svg:hover {
+  fill: rgba(203, 213, 224);
 }
 </style>
   

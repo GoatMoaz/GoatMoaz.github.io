@@ -6,7 +6,7 @@
     >
       My Personal Projects
     </h2>
-    <div class="inline-grid grid-cols-2 gap-4 place-items-center w-full">
+    <div class="grid grid-cols-2 gap-4 p-4 lg:grid-cols-1">
       <ProjectCard :project="gradientTextGenerator" />
       <ProjectCard :project="nuxtDojo" />
       <ProjectCard :project="ticTacToe" />
@@ -14,7 +14,7 @@
       <ProjectCard :project="landingPage" />
       <ProjectCard :project="reactionTimer" />
     </div>
-    <div class="border-b my-4 pb-4 w-4/6 mx-auto"></div>
+    <div class="border-b my-4 pb-4 w-4/6 mx-auto xl:w-full"></div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-4 mx-auto max-w-5xl">
+  <div class="pt-4 mx-auto max-w-5xl p-4">
     <h2
       class="font-bold mb-6 text-xl"
       :class="{ 'text-white ': dark, 'text-black': !dark }"

@@ -1,20 +1,20 @@
 <template>
   <div
-    :class="{
-      'place-self-end': project.left,
-      'place-self-start': !project.left,
-    }"
+    class="flex"
+    :class="{ 'justify-end lg:justify-center': project.left, 'justify-start lg:justify-center': !project.left }"
   >
     <div
-      class="relative w-full rounded-lg border-rose-50 bg-slate-950 overflow-hidden transition-transform transform hover:shadow-2xl"
+      class="w-4/6 xl:w-5/6 lg:w-full rounded-lg border-rose-50 bg-slate-950 overflow-hidden transition-transform transform hover:shadow-2xl"
     >
       <NuxtImg
         :src="project.image"
         :alt="project.title"
-        class="w-full h-64 object-center opacity-60"
+        class="w-full object-center opacity-60"
       />
       <div class="absolute inset-0 flex items-center justify-center">
-        <span class="text-4xl text-white font-bold">{{ project.title }}</span>
+        <span class="text-4xl md:text-3xl text-center text-white font-bold">{{
+          project.title
+        }}</span>
       </div>
       <div
         class="absolute inset-0 bg-slate-900 bg-opacity-75 opacity-0 ease duration-300 hover:opacity-100 transition-opacity flex flex-col justify-between p-4"

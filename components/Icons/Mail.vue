@@ -14,4 +14,11 @@
     ></path>
   </svg>
 </template>
+
+<style scoped>
+
+path:hover {
+  fill: rgba(203, 213, 224);
+}
+</style>
   

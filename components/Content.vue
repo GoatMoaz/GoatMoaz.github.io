@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="flex-col flex items-center justify-center mx-80">
-      <div class="flex items-center justify-center gap-7">
+    <div class="flex-col flex items-center justify-center mx-80 xl:mx-0">
+      <div class="flex items-center justify-center gap-7 lg:flex-col lg:gap-4">
         <h1
           class="text-4xl text-center font-bold"
           :class="{ 'text-white ': dark, 'text-black': !dark }"
@@ -13,7 +13,7 @@
         />
       </div>
       <p
-        class="text-center text-lg my-4"
+        class="text-center text-lg my-4 xl:px-6 md:p-1"
         :class="{ 'text-[#cbd5e0] ': dark, 'text-slate-950': !dark }"
       >
         I'm a passionate computer science student from Egypt dedicated to
@@ -29,11 +29,11 @@
       <div class="flex justify-evenly items-center border-b w-full pb-4 mb-4">
         <img
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/code_review.fb0d488.svg"
-          class="w-56"
+          class="w-56 lg:w-48"
         />
         <img
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/mind_map.552134e.svg"
-          class="w-56"
+          class="w-56 lg:w-48 md:hidden"
         />
       </div>
     </div>
