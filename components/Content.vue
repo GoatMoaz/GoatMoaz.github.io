@@ -3,7 +3,7 @@
     <div class="flex-col flex items-center justify-center mx-80 xl:mx-0">
       <div class="flex items-center justify-center gap-7 lg:flex-col lg:gap-4">
         <h1
-          class="text-4xl text-center font-bold"
+          class="text-4xl md:text-2xl text-center font-bold"
           :class="{ 'text-white ': dark, 'text-black': !dark }"
         >
           Hello, I'm <span class="text-[#00C48D]">Moaz Ayman</span>
@@ -26,6 +26,14 @@
         learning and applying modern web technologies positions him as a
         promising developer in the tech industry.
       </p>
+      <a
+        href="/Moaz's resume.pdf"
+        class="btn"
+        :class="{ 'text-[#cbd5e0]': dark, 'text-[rgb(27, 27, 27)]': !dark }"
+        download="Moaz's resume"
+      >
+        Download my CV</a
+      >
       <div class="flex justify-evenly items-center border-b w-full pb-4 mb-4">
         <img
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/code_review.fb0d488.svg"
@@ -46,4 +54,44 @@ const dark = ref($dark);
 </script>
 
 <style scoped>
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid;
+  border-radius: 1000px;
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(27, 27, 27, 0.5);
+}
+
+.btn:active {
+  transform: translateY(-3px);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn:hover::after {
+  background-color: #00c48d;
+  transform: scaleX(1.4) scaleY(1.5);
+  opacity: 0;
+}
 </style>

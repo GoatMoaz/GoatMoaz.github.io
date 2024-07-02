@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2
-      class="text-center text-4xl font-bold mb-4"
+      class="text-center text-4xl font-bold mb-4 md:text-3xl"
       :class="{ 'text-white ': dark, 'text-black': !dark }"
     >
       My Personal Projects
@@ -14,6 +14,13 @@
       <ProjectCard :project="landingPage" />
       <ProjectCard :project="reactionTimer" />
     </div>
+    <div class="flex justify-center items-center">
+      <button class="button" @click="handleClick">
+        <IconsGithub />
+        See More Projects on Github
+      </button>
+    </div>
+
     <div class="border-b my-4 pb-4 w-4/6 mx-auto xl:w-full"></div>
   </div>
 </template>
@@ -21,6 +28,12 @@
 <script setup>
 const { $dark } = useNuxtApp();
 const dark = ref($dark);
+
+const handleClick = () => {
+  if (typeof window !== "undefined") {
+    window.open("https://github.com/GoatMoaz", "_blank");
+  }
+};
 
 class Project {
   constructor(
@@ -102,3 +115,34 @@ const reactionTimer = new Project(
   false
 );
 </script>
+
+<style scoped>
+.button {
+  display: flex;
+  background-color: rgb(24, 23, 23);
+  color: #ffffff;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.6s ease;
+}
+
+.button svg {
+  height: 30px;
+}
+
+.button:hover {
+  box-shadow: none;
+  background-color: black;
+}
+</style>

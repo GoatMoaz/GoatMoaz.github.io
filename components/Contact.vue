@@ -71,6 +71,7 @@
             'text-[#cbd5e0] bg-[#1A202C]': dark,
             'text-slate-950 bg-white': !dark,
           }"
+          class="md:w-full"
         >
           Submit
         </button>

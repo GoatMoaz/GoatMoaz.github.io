@@ -7,11 +7,17 @@
     viewBox="0 0 24 24"
   >
     <path
-      fill="#cbd5e0"
+      :fill="dark ? '#cbd5e0' : 'black'"
       d="M19 12.75H5a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5m0-4.5H5a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5m0 9H5a.75.75 0 0 1 0-1.5h14a.75.75 0 0 1 0 1.5"
     ></path>
   </svg>
 </template>
+
+<script setup>
+const { $dark } = useNuxtApp();
+const dark = ref($dark);
+</script>
+
 <style scoped>
 svg {
   cursor: pointer;

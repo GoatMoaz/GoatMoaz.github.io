@@ -12,7 +12,7 @@
         class="w-full object-center opacity-60"
       />
       <div class="absolute inset-0 flex items-center justify-center">
-        <span class="text-4xl md:text-3xl text-center text-white font-bold">{{
+        <span class="text-4xl md:text-2xl text-center text-white font-bold">{{
           project.title
         }}</span>
       </div>
