@@ -1,19 +1,26 @@
 <template>
   <div>
-    <div class="flex-col flex items-center justify-center mx-80 xl:mx-0">
+    <div class="flex-col p-4 flex items-center justify-center w-4/6 mx-auto lg:w-full xl:w-5/6">
       <div class="flex items-center justify-center gap-7 lg:flex-col lg:gap-4">
         <h1
+          v-motion-slide-visible-once-right
+          :duration="1000"
           class="text-4xl md:text-2xl text-center font-bold"
           :class="{ 'text-white ': dark, 'text-black': !dark }"
         >
           Hello, I'm <span class="text-[#00C48D]">Moaz Ayman</span>
         </h1>
         <img
+          v-motion-fade
+          :duration="1000"
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/developer.721e2ae.svg"
+          class="md:w-48"
         />
       </div>
       <p
-        class="text-center text-lg my-4 xl:px-6 md:p-1"
+        v-motion-fade
+        :duration="1000"
+        class="text-center text-lg my-4 xl:px-6 md:p-1 md:text-base"
         :class="{ 'text-[#cbd5e0] ': dark, 'text-slate-950': !dark }"
       >
         I'm a passionate computer science student from Egypt dedicated to
@@ -27,6 +34,8 @@
         promising developer in the tech industry.
       </p>
       <a
+        v-motion-fade
+        :duration="1000"
         href="/Moaz's resume.pdf"
         class="btn"
         :class="{ 'text-[#cbd5e0]': dark, 'text-[rgb(27, 27, 27)]': !dark }"
@@ -36,10 +45,14 @@
       >
       <div class="flex justify-evenly items-center border-b w-full pb-4 mb-4">
         <img
+          v-motion-fade
+          :duration="1000"
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/code_review.fb0d488.svg"
           class="w-56 lg:w-48"
         />
         <img
+          v-motion-fade
+          :duration="1000"
           src="https://nuxt-portfolio-starter.netlify.app/_nuxt/img/mind_map.552134e.svg"
           class="w-56 lg:w-48 md:hidden"
         />

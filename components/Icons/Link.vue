@@ -13,3 +13,11 @@
     ></path>
   </svg>
 </template>
+
+<style>
+@media screen and (max-width: 440px){
+   svg{
+    height: 1.2em;
+   }
+}
+</style>

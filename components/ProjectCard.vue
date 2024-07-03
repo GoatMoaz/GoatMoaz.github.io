@@ -1,10 +1,16 @@
 <template>
   <div
+    v-motion-slide-visible-once-bottom
+    :duration="1000"
+    :delay="500 * (project.id % 2 === 0)"
     class="flex"
-    :class="{ 'justify-end lg:justify-center': project.left, 'justify-start lg:justify-center': !project.left }"
+    :class="{
+      'justify-end lg:justify-center': project.left,
+      'justify-start lg:justify-center': !project.left,
+    }"
   >
     <div
-      class="w-4/6 xl:w-5/6 lg:w-full rounded-lg border-rose-50 bg-slate-950 overflow-hidden transition-transform transform hover:shadow-2xl"
+      class="w-4/6 pxl:w-full rounded-lg border-rose-50 bg-slate-950 overflow-hidden transition-transform transform hover:shadow-2xl"
     >
       <NuxtImg
         :src="project.image"
@@ -20,18 +26,18 @@
         class="absolute inset-0 bg-slate-900 bg-opacity-75 opacity-0 ease duration-300 hover:opacity-100 transition-opacity flex flex-col justify-between p-4"
       >
         <div>
-          <h3 class="text-xl font-bold text-white mb-2 underline">
+          <h3 class="text-xl pmd:text-base font-bold text-white mb-2 underline">
             {{ project.title }}
           </h3>
-          <p class="text-white mb-4">
+          <p class="text-white mb-4 pmd:text-sm pmd:line-clamp-2">
             {{ project.description }}
           </p>
         </div>
         <div class="flex justify-between items-center">
-          <p class="text-white text-sm">
+          <p class="text-white text-sm pmd:text-xs">
             {{ project.techStack }}
           </p>
-          <div class="flex justify-center items-center gap-4">
+          <div class="flex justify-center items-center gap-4 md:gap-1">
             <a
               :href="project.liveLink"
               target="_blank"

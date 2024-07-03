@@ -15,5 +15,11 @@
 svg:hover {
   fill: rgba(203, 213, 224);
 }
+
+@media screen and (max-width: 440px){
+   svg{
+    height: 1.2em;
+   }
+}
 </style>
   

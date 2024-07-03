@@ -1,12 +1,14 @@
 <template>
   <div>
     <h2
+      v-motion-slide-visible-once-left
+      :duration="1000"
       class="text-center text-4xl font-bold mb-4 md:text-3xl"
       :class="{ 'text-white ': dark, 'text-black': !dark }"
     >
       My Personal Projects
     </h2>
-    <div class="grid grid-cols-2 gap-4 p-4 lg:grid-cols-1">
+    <div class="grid grid-cols-2 gap-4 p-4 plg:grid-cols-1">
       <ProjectCard :project="gradientTextGenerator" />
       <ProjectCard :project="nuxtDojo" />
       <ProjectCard :project="ticTacToe" />
@@ -43,7 +45,8 @@ class Project {
     techStack,
     liveLink,
     githubLink,
-    left
+    left,
+    id
   ) {
     this.title = title;
     this.description = description;
@@ -52,6 +55,7 @@ class Project {
     this.liveLink = liveLink;
     this.githubLink = githubLink;
     this.left = left;
+    this.id = id;
   }
 }
 
@@ -62,7 +66,8 @@ const gradientTextGenerator = new Project(
   "Nuxt 3 - JS - TailwindCSS - CSS - HTML",
   "https://gradient-text-generator.netlify.app/",
   "https://github.com/GoatMoaz/Gradient-Text-Generator",
-  true
+  true,
+  1
 );
 
 const nuxtDojo = new Project(
@@ -72,7 +77,8 @@ const nuxtDojo = new Project(
   "Nuxt 3 - JS - TailwindCSS - Apis - CSS - HTML",
   "https://nuxt-dojo-merch.netlify.app/",
   "https://github.com/GoatMoaz/Nuxt-Dojo",
-  false
+  false,
+  2
 );
 
 const ticTacToe = new Project(
@@ -82,7 +88,8 @@ const ticTacToe = new Project(
   "JS - CSS - HTML",
   "https://goatmoaz.github.io/Tic-Tac-Toe/",
   "https://github.com/GoatMoaz/Tic-Tac-Toe",
-  true
+  true,
+  3
 );
 
 const weatherApp = new Project(
@@ -92,7 +99,8 @@ const weatherApp = new Project(
   "Apis - JS - CSS - HTML",
   "https://goatmoaz.github.io/Weather-App/",
   "https://github.com/GoatMoaz/Weather-App",
-  false
+  false,
+  4
 );
 
 const landingPage = new Project(
@@ -102,7 +110,8 @@ const landingPage = new Project(
   "CSS - HTML",
   "https://goatmoaz.github.io/Landing-Page/",
   "https://github.com/GoatMoaz/Landing-Page",
-  true
+  true,
+  5
 );
 
 const reactionTimer = new Project(
@@ -112,7 +121,8 @@ const reactionTimer = new Project(
   "Vue - JS - CSS - HTML",
   "https://calm-pasca-2a0d7d.netlify.app/",
   "https://github.com/GoatMoaz/reaction-timer",
-  false
+  false,
+  6
 );
 </script>
 

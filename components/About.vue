@@ -6,16 +6,16 @@
     >
       Get to know me
     </h2>
-    <div class="flex justify-between items-center mb-16 max-w-4xl mx-auto md:flex-col">
-      <div>
-        <img
-          src="/me.jpg"
-          alt="Avatar of Moaz Ayman"
-          class="rounded-full w-32 h-32 object-cover mb-4"
-        />
-      </div>
+    <div
+      class="flex justify-between items-center mb-16 max-w-4xl mx-auto lg:flex-col"
+    >
+      <img
+        src="/me.jpg"
+        alt="Avatar of Moaz Ayman"
+        class="rounded-full w-32 h-32 object-cover mb-4"
+      />
       <div
-        class="flex-1 text-xl ml-6"
+        class="flex-1 text-xl ml-6 lg:text-lg lg:text-center lg:ml-0"
         :class="{ 'text-[#cbd5e0] ': dark, 'text-slate-950': !dark }"
       >
         My commitment to learning and applying modern web technologies positions
