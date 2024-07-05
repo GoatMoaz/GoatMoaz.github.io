@@ -12,7 +12,7 @@
     <div
       class="w-4/6 pxl:w-full rounded-lg border-rose-50 bg-slate-950 overflow-hidden transition-transform transform hover:shadow-2xl"
     >
-      <NuxtImg
+      <img
         :src="project.image"
         :alt="project.title"
         class="w-full object-center opacity-60"
