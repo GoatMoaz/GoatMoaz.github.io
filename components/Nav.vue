@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="w-full backdrop-blur-lg fixed top-0 z-10 px-5 sm:px-10 py-5 ">
     <nav
-      class="flex justify-between items-center py-8 px-4 w-4/6 mx-auto xl:mx-0 xl:w-full"
+      class="flex justify-between items-center w-4/6 mx-auto xl:mx-0 xl:w-full"
     >
       <NuxtLink class="text-white font font-bold" href="/">
         <div v-if="dark">
@@ -64,7 +64,7 @@
         </div>
       </ul>
     </nav>
-    <div class="flex-col px-4 gap-3 xl:hidden lg:flex" v-if="dropDown">
+    <div class="px-4 gap-3 pt-4 items-center justify-center 2xl:hidden lg:flex" v-if="dropDown">
       <NuxtLink
         href="/#projects"
         class="hover:text-[#00C48D] font-semibold uppercase text-lg cursor-pointer"

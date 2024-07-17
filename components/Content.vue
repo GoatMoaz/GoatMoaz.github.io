@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex-col p-4 flex items-center justify-center w-4/6 mx-auto lg:w-full xl:w-5/6">
+    <div class="flex-col p-4 flex items-center pt-20 justify-center w-4/6 mx-auto lg:w-full xl:w-5/6">
       <div class="flex items-center justify-center gap-7 lg:flex-col lg:gap-4">
         <h1
           v-motion-slide-visible-once-right
